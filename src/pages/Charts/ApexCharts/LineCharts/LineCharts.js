@@ -1199,7 +1199,7 @@ const GradientCircleRadialbar = ({ dataColors, edited }) => {
         series={series}
         options={options}
         type='radialBar'
-        height={325}
+        height='100%'
       />
     </>
   );

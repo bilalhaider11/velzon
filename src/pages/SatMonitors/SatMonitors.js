@@ -132,6 +132,7 @@ const SatMonitors = () => {
                     <div
                       style={{
                         marginTop: "-30px",
+                        height: "310px",
                       }}
                     >
                       <GradientCircleRadialbar
@@ -139,7 +140,7 @@ const SatMonitors = () => {
                         edited={edit}
                       />
                     </div>
-                    <div style={{ marginTop: "-40px" }}>
+                    <div style={{ marginTop: "-110px" }}>
                       <BrushChart1 dataColors='["--vz-danger"]' />
                     </div>
                   </CardBody>
