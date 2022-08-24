@@ -1746,7 +1746,7 @@ const FunnelChart = ({ dataColors }) => {
 //Gauge Chart
 const GaugeChart = ({ dataColors }) => {
   const [clicked, setClicked] = useState(false);
-  var chartGaugeColors = clicked
+  const chartGaugeColors = clicked
     ? getChartColorsArray('["--vz-info"]')
     : getChartColorsArray(dataColors);
   const value = val => {
@@ -1761,7 +1761,7 @@ const GaugeChart = ({ dataColors }) => {
   const events = {
     click: onChartClick,
   };
-  var option = {
+  const option = {
     tooltip: {
       formatter: val => {
         const unit = clicked ? "°F" : "°C";

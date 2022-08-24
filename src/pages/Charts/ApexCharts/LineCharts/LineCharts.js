@@ -783,7 +783,7 @@ const LinewithDataLabels = ({ dataColors }) => {
 };
 
 const DashedLine = ({ dataColors }) => {
-  var DashedLineColors = getChartColorsArray(dataColors);
+  const DashedLineColors = getChartColorsArray(dataColors);
   const [clicked, setClicked] = useState(false);
   const value = val => {
     if (clicked) {
@@ -791,7 +791,7 @@ const DashedLine = ({ dataColors }) => {
     }
     return val;
   };
-  var series = [
+  const series = [
     {
       name: "Boost Converter Temp X",
       data: [15, 22, 38, -1, 33, -7, 21, -5, 6, 8],
@@ -805,7 +805,7 @@ const DashedLine = ({ dataColors }) => {
       data: [29, 16, -7, 28, 12, -4, 14, 6, -4, -18],
     },
   ];
-  var options = {
+  const options = {
     chart: {
       height: 380,
       type: "line",
@@ -1120,7 +1120,7 @@ const BrushChart = ({ dataColors }) => {
 };
 
 const GradientCircleRadialbar = ({ dataColors, edited }) => {
-  var chartRadialbarGradientColors = getChartColorsArray(dataColors);
+  const chartRadialbarGradientColors = getChartColorsArray(dataColors);
 
   const value = val => {
     if (edited) {
@@ -1130,7 +1130,7 @@ const GradientCircleRadialbar = ({ dataColors, edited }) => {
   };
   const val = 76;
   const series = [val];
-  var options = {
+  const options = {
     chart: {
       id: "radialChart",
       type: "radialBar",
@@ -1206,15 +1206,14 @@ const GradientCircleRadialbar = ({ dataColors, edited }) => {
 };
 
 const BrushChart1 = ({ dataColors }) => {
-  var BrushChart1Colors = getChartColorsArray(dataColors);
+  const BrushChart1Colors = getChartColorsArray(dataColors);
   const generateDayWiseTimeSeries = (baseval, count, yrange) => {
-    var i = 0;
-    var series = [];
+    let i = 0;
+    const series = [];
     while (i < count) {
-      var x = baseval;
-      var y =
+      const x = baseval;
+      const y =
         Math.floor(Math.random() * (yrange.max - yrange.min + 1)) + yrange.min;
-      console.log({ y });
       series.push([x, y]);
       baseval += 86400000;
       i++;
@@ -1222,17 +1221,22 @@ const BrushChart1 = ({ dataColors }) => {
     return series;
   };
 
-  var data = generateDayWiseTimeSeries(new Date("23 Aug 2022").getTime(), 105, {
-    min: 30,
-    max: 60,
-  });
+  const data = generateDayWiseTimeSeries(
+    new Date("23 Aug 2022").getTime(),
+    105,
+    {
+      min: 30,
+      max: 60,
+    }
+  );
 
   const series = [
     {
       data: data,
     },
   ];
-  var options = {
+
+  const options = {
     chart: {
       id: "chart1",
       brush: {
@@ -1242,8 +1246,8 @@ const BrushChart1 = ({ dataColors }) => {
       selection: {
         enabled: !0,
         xaxis: {
-          min: new Date("19 Aug 2022").getTime(),
-          max: new Date("20 Aug 2022").getTime(),
+          min: new Date("19 Jun 2022").getTime(),
+          max: new Date("14 Aug 2011").getTime(),
         },
       },
     },
@@ -1282,6 +1286,7 @@ const BrushChart1 = ({ dataColors }) => {
       labels: {
         show: false,
       },
+      tickAmount: 2,
     },
   };
 

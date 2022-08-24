@@ -476,17 +476,6 @@ const PaginationExample2 = () => {
               minWidth: "100px",
               maxWidth: "100px",
             },
-            // {
-            //   name: "Actions",
-            //   width: "100px",
-            //   formatter: cell =>
-            //     _(
-            //       <button type='button' className='btn btn-sm btn-light'>
-            //         {" "}
-            //         Details{" "}
-            //       </button>
-            //     ),
-            // },
           ]}
           pagination={{ enabled: true, limit: 2 }}
         />
